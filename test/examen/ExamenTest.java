@@ -22,7 +22,7 @@ public class ExamenTest {
     int[] listaEnteros = null;
     try {
       int result = Examen.elMayorDe(listaEnteros);
-      fail("El método no funciona correctamente no lanza la exepción");
+      fail("El método no funciona correctamente no lanza la exepción cuando el array no esta inicializado.");
     } catch (Exception e) {
       assertTrue(true);
     }
@@ -38,7 +38,7 @@ public class ExamenTest {
     int[] listaEnteros = new int[200];
     try {
       int result = Examen.elMayorDe(listaEnteros);
-      fail("El método no funciona correctamente no lanza la exepción");
+      fail("El método no funciona correctamente no lanza la exepción cuando el array es de mayor tamaño al permitido.");
     } catch (Exception e) {
       assertTrue(true);
     }
@@ -58,9 +58,9 @@ public class ExamenTest {
     try {
       resultado = Examen.elMayorDe(listaEnteros);
     } catch (Exception e) {
-      fail("El método no funciona correctamente lanza la exepción");
+      fail("El método no funciona correctamente lanza la exepción y no debe.");
     }
-    assertEquals("El método no funciona correctamente no devuelve lo esperado", resultadoEsperado, resultado);
+    assertEquals("El método no funciona correctamente no devuelve el unico valor de la posisión del array.", resultadoEsperado, resultado);
   }
 
   /**
@@ -78,9 +78,9 @@ public class ExamenTest {
     try {
       resultado = Examen.elMayorDe(listaEnteros);
     } catch (Exception e) {
-      fail("El método no funciona correctamente lanza la exepción");
+      fail("El método no funciona correctamente lanza la exepción y no debe.");
     }
-    assertEquals("El método no funciona correctamente no devuelve lo esperado", resultadoEsperado, resultado);
+    assertEquals("El método no funciona correctamente no devuelve el valor de la primera posición porque es la mayor.", resultadoEsperado, resultado);
   }
 
   /**
@@ -98,8 +98,8 @@ public class ExamenTest {
     try {
       resultado = Examen.elMayorDe(listaEnteros);
     } catch (Exception e) {
-      fail("El método no funciona correctamente lanza la exepción");
+      fail("El método no funciona correctamente lanza la exepción y no debe.");
     }
-    assertEquals("El método no funciona correctamente no devuelve lo esperado", resultadoEsperado, resultado);
+    assertEquals("El método no funciona correctamente no devuelve el valor de la segunda posición y esta es la mayor.", resultadoEsperado, resultado);
   }
 }
