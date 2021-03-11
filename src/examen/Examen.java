@@ -4,6 +4,8 @@ package examen;
  * Clase examen. contiene un método que comprueba una lista de enteros y
  * devuelve el mayor valor de la lista.
  *
+ * enlace Github. https://github.com/ariolim/examen_ED_tri02.git
+ * 
  * @author Andres Ríos Lima
  */
 public class Examen {
@@ -29,8 +31,7 @@ public class Examen {
 
     }
     if (listaEnteros.length > TAMAÑOMAXIMO) {
-      throw new Exception(
-              "Lista de números demasido grande, no se puede calcular el máximo");
+      throw new Exception("Lista de números demasido grande, no se puede calcular el máximo");        
     }
     int mayor = listaEnteros[0];
     for (int i = 1; i < listaEnteros.length; i++) {
