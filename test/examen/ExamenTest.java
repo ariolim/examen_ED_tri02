@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 /**
  * Clase test. comprue3be que todos los caminos del método elMayorDe funciona
  * correctamente.
- * 
+ *
  * enlace Github. https://github.com/ariolim/examen_ED_tri02.git
  *
  * @author Andrés Ríos Lima
@@ -22,8 +22,9 @@ public class ExamenTest {
     int[] listaEnteros = null;
     try {
       int result = Examen.elMayorDe(listaEnteros);
+      fail("El método no funciona correctamente no lanza la exepción");
     } catch (Exception e) {
-      assertTrue("El método no funciona correctamente no lanza la exepción", true);
+      assertTrue(true);
     }
   }
 
@@ -37,8 +38,9 @@ public class ExamenTest {
     int[] listaEnteros = new int[200];
     try {
       int result = Examen.elMayorDe(listaEnteros);
+      fail("El método no funciona correctamente no lanza la exepción");
     } catch (Exception e) {
-      assertTrue("El método no funciona correctamente no lanza la exepción", true);
+      assertTrue(true);
     }
   }
 
@@ -56,7 +58,7 @@ public class ExamenTest {
     try {
       resultado = Examen.elMayorDe(listaEnteros);
     } catch (Exception e) {
-      fail("El método no funciona correctamente no lanza la exepción");
+      fail("El método no funciona correctamente lanza la exepción");
     }
     assertEquals("El método no funciona correctamente no devuelve lo esperado", resultadoEsperado, resultado);
   }
@@ -76,7 +78,7 @@ public class ExamenTest {
     try {
       resultado = Examen.elMayorDe(listaEnteros);
     } catch (Exception e) {
-      fail("El método no funciona correctamente no lanza la exepción");
+      fail("El método no funciona correctamente lanza la exepción");
     }
     assertEquals("El método no funciona correctamente no devuelve lo esperado", resultadoEsperado, resultado);
   }
@@ -96,7 +98,7 @@ public class ExamenTest {
     try {
       resultado = Examen.elMayorDe(listaEnteros);
     } catch (Exception e) {
-      fail("El método no funciona correctamente no lanza la exepción");
+      fail("El método no funciona correctamente lanza la exepción");
     }
     assertEquals("El método no funciona correctamente no devuelve lo esperado", resultadoEsperado, resultado);
   }
